@@ -44,6 +44,10 @@ all_links() {
   local dir=$(dirname $1)
   echo "${dir}/$file"
   while file=$(readlink "${dir}/$file"); do
+    if [[ "${file:0:1}" = "/" ]]; then
+      dir=$(dirname "$file")
+      file=$(basename "$file")
+    fi
     echo -n " ${dir}/$file"
   done
 }
