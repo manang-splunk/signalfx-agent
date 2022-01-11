@@ -2,8 +2,6 @@ name: pytest_lint
 
 on:
   push:
-    branches:
-      - main
   pull_request:
     paths:
       - '.github/workflows/pytest_lint.yml'

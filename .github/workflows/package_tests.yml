@@ -3,8 +3,6 @@ name: package_tests
 # Only run tests for main branch or if the PR has relevant changes
 on: 
   push:
-    branches:
-      - main
   pull_request:
     paths:
       - '.github/workflows/package_tests.yml'
